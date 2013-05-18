@@ -1,0 +1,18 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/airplane1" android:duration="50" />
+    <item android:drawable="@drawable/airplane2" android:duration="50" />
+    <item android:drawable="@drawable/airplane3" android:duration="50" />
+    <item android:drawable="@drawable/airplane4" android:duration="50" />
+    <item android:drawable="@drawable/airplane5" android:duration="50" />
+    <item android:drawable="@drawable/airplane6" android:duration="50" />
+    <item android:drawable="@drawable/airplane7" android:duration="50" />
+    <item android:drawable="@drawable/airplane8" android:duration="50" />
+    <item android:drawable="@drawable/airplane9" android:duration="50" />
+    <item android:drawable="@drawable/airplane10" android:duration="50" />
+    <item android:drawable="@drawable/airplane11" android:duration="50" />
+    <item android:drawable="@drawable/airplane12" android:duration="50" />
+    <item android:drawable="@drawable/airplane13" android:duration="50" />
+    <item android:drawable="@drawable/airplane14" android:duration="50" />
+    <item android:drawable="@drawable/airplane15" android:duration="50" />
+    <item android:drawable="@drawable/airplane16" android:duration="50" />
+</animation-list>

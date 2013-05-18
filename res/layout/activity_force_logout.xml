@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ForceLogoutActivity"
+    android:background="@drawable/background_logout"
+    android:onClick="refresh" >
+
+    <ImageView
+        android:id="@+id/imageview_username_forcelogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/username"
+        android:contentDescription="@string/img_forcelogout"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" />
+
+    <ImageView
+        android:id="@+id/imageview_areaname_forcelogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageview_username_forcelogout"
+        android:layout_below="@+id/imageview_username_forcelogout"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/areaname"
+        android:contentDescription="@string/img_areaname" />
+
+    <ImageView
+        android:id="@+id/imageview_logintime_forcelogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageview_areaname_forcelogout"
+        android:layout_below="@+id/imageview_areaname_forcelogout"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/logintime"
+        android:contentDescription="@string/img_logintime" />
+
+    <ImageView
+        android:id="@+id/imageview_ip_forcelogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageview_logintime_forcelogout"
+        android:layout_below="@+id/imageview_logintime_forcelogout"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ip"
+        android:contentDescription="@string/img_ip" />
+
+    <Button
+        android:id="@+id/button_forcelogout"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/button_style"
+        android:text="@string/button_forcelogout"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:onClick="forceLogout" />
+    
+    <TextView
+        android:id="@+id/textview_username_forcelogout"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageview_username_forcelogout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/imageview_username_forcelogout"
+        android:text="@string/getting_content"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center" />
+    
+    <TextView
+        android:id="@+id/textview_areaname_forcelogout"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageview_areaname_forcelogout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/imageview_areaname_forcelogout"
+        android:text="@string/other_online"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center" />
+    
+    <TextView
+        android:id="@+id/textview_logintime_forcelogout"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageview_logintime_forcelogout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/imageview_logintime_forcelogout"
+        android:text="@string/getting_content"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center" />
+    
+    <TextView
+        android:id="@+id/textview_ip_forcelogout"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageview_ip_forcelogout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/imageview_ip_forcelogout"
+        android:text="@string/getting_content"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center" />
+
+</RelativeLayout>
