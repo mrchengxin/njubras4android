@@ -183,7 +183,7 @@ public class BrasClient {
 					{
 						return R.string.msg_password_error;
 					} 
-					else if (doc.html().contains("您的登录数已达最大并发登录数"))
+					else if (doc.html().contains("其他地点在线"))
 					{
 						return R.string.msg_other_online;
 					}

@@ -50,7 +50,9 @@ public class ForceLogoutActivity extends Activity {
 		super.onOptionsItemSelected(item);
 		if (item.getTitle().equals("退出")) {
 			// 退出进程
-	    	Intent intent = new Intent(Intent.ACTION_MAIN);
+			Intent intent = new Intent(this, MainActivity.class);
+			startActivity(intent);
+	    	intent = new Intent(Intent.ACTION_MAIN);
 			intent.addCategory(Intent.CATEGORY_HOME);
 			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(intent);
@@ -62,7 +64,9 @@ public class ForceLogoutActivity extends Activity {
 	@Override
 	public void onBackPressed() {
 		// 退出进程
-    	Intent intent = new Intent(Intent.ACTION_MAIN);
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
+    	intent = new Intent(Intent.ACTION_MAIN);
 		intent.addCategory(Intent.CATEGORY_HOME);
 		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
