@@ -1,5 +1,9 @@
 package cn.nju.cs.seg.brasclient;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,7 +19,7 @@ import cn.nju.cs.seg.brasclient.bean.Content;
 
 public class ForceLogoutActivity extends Activity {
 	
-	private TextView username, areaname, logintime, ip;
+	private TextView username, areaname, logintime, ip, payamount;
 	
 	private SharedPreferences sp;
 
@@ -29,6 +33,7 @@ public class ForceLogoutActivity extends Activity {
 		areaname = (TextView)findViewById(R.id.textview_areaname_forcelogout);
 		logintime = (TextView)findViewById(R.id.textview_logintime_forcelogout);
 		ip = (TextView)findViewById(R.id.textview_ip_forcelogout);
+		payamount = (TextView)findViewById(R.id.textview_payamount_forcelogout);
 		
 		sp = this.getSharedPreferences("userinfo", MODE_PRIVATE);
 		
@@ -81,6 +86,7 @@ public class ForceLogoutActivity extends Activity {
 			return MainActivity.client.getContent(params[0], params[1]);
 		}
 		
+		@SuppressLint("SimpleDateFormat")
 		@Override
 		protected void onPostExecute(Content result) {
 			super.onPostExecute(result);
@@ -89,10 +95,12 @@ public class ForceLogoutActivity extends Activity {
 					username.setText(result.getResults().getUsername());
 				if (result.getResults().getArea_name() != null)
 					areaname.setText(result.getResults().getArea_name());
-				if (result.getResults().getAcctstarttime() != null)
-					logintime.setText(result.getResults().getAcctstarttime().substring(result.getResults().getAcctstarttime().indexOf("-")+1));
+				if (result.getResults().getAcctstarttime() > 0)
+					logintime.setText(new SimpleDateFormat("MM/dd  HH:mm").format(new Date(result.getResults().getAcctstarttime()*1000)));
 				if (result.getResults().getUser_ip() != null)
 					ip.setText(result.getResults().getUser_ip());
+				if (result.getResults().getPayamount() >= 0.0)
+					payamount.setText(String.format("%.2f 元", result.getResults().getPayamount()));
 			}
 		}
 	}

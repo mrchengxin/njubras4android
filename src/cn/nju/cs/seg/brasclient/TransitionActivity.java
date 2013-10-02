@@ -13,7 +13,7 @@ import android.view.Window;
 import android.widget.ImageView;
 
 public class TransitionActivity extends Activity {
-	private final static int DEFAULT_DELAY_MILLIS = 1000;
+	private final static int DEFAULT_DELAY_MILLIS = 50;
 	
 	private AnimationDrawable airplaneAnimation;
 	

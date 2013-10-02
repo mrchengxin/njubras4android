@@ -12,11 +12,11 @@
 
     <ImageView
         android:id="@+id/imageview_username_forcelogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/username"
         android:contentDescription="@string/img_forcelogout"
         android:ems="10"
@@ -26,33 +26,44 @@
 
     <ImageView
         android:id="@+id/imageview_areaname_forcelogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_alignLeft="@+id/imageview_username_forcelogout"
         android:layout_below="@+id/imageview_username_forcelogout"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/areaname"
         android:contentDescription="@string/img_areaname" />
 
     <ImageView
         android:id="@+id/imageview_logintime_forcelogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_alignLeft="@+id/imageview_areaname_forcelogout"
         android:layout_below="@+id/imageview_areaname_forcelogout"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/logintime"
         android:contentDescription="@string/img_logintime" />
 
     <ImageView
         android:id="@+id/imageview_ip_forcelogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_alignLeft="@+id/imageview_logintime_forcelogout"
         android:layout_below="@+id/imageview_logintime_forcelogout"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ip"
         android:contentDescription="@string/img_ip" />
+    
+    <ImageView
+        android:id="@+id/imageview_payamount_forcelogout"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignLeft="@+id/imageview_ip_forcelogout"
+        android:layout_below="@+id/imageview_ip_forcelogout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/payamount"
+        android:contentDescription="@string/img_payamount" />
 
     <Button
         android:id="@+id/button_forcelogout"
@@ -60,7 +71,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="90dp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/button_style"
         android:text="@string/button_forcelogout"
         android:textSize="26sp"
@@ -89,7 +100,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="2dp"
         android:layout_toRightOf="@+id/imageview_areaname_forcelogout"
-        android:text="@string/other_online"
+        android:text="@string/getting_content"
         android:textSize="22sp"
         android:textColor="#ffffff"
         android:textAlignment="center" />
@@ -115,6 +126,19 @@
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="2dp"
         android:layout_toRightOf="@+id/imageview_ip_forcelogout"
+        android:text="@string/getting_content"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center" />
+    
+    <TextView
+        android:id="@+id/textview_payamount_forcelogout"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageview_payamount_forcelogout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/imageview_payamount_forcelogout"
         android:text="@string/getting_content"
         android:textSize="22sp"
         android:textColor="#ffffff"

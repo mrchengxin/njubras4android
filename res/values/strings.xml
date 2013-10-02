@@ -32,6 +32,7 @@
     <string name="img_areaname">区域名称</string>
     <string name="img_logintime">登陆时间</string>
     <string name="img_ip">IP地址</string>
+    <string name="img_payamount">账户余额</string>
 
     <!-- hint -->
     <string name="hint_input_username">请输入用户名</string>
