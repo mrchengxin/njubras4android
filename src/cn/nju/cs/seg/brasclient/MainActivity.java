@@ -1,15 +1,9 @@
 package cn.nju.cs.seg.brasclient;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -18,7 +12,6 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-import cn.nju.cs.seg.brasclient.util.OCRUtil;
 import cn.nju.cs.seg.brasclient.util.SystemUiHider;
 
 /**
@@ -38,7 +31,7 @@ public class MainActivity extends Activity {
 	 * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
 	 * user interaction before hiding the system UI.
 	 */
-	private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
+	private static final int AUTO_HIDE_DELAY_MILLIS = 0;
 
 	/**
 	 * If set, will toggle the system UI visibility upon interaction. Otherwise,
@@ -156,21 +149,6 @@ public class MainActivity extends Activity {
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
 		findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
-		
-		// 初始化验证码训练集
-		try {
-			String imgs[] = getAssets().list("train");
-			OCRUtil.trainMap = new HashMap<Bitmap, String>();
-			InputStream in = null;
-			for (int i=0; i<imgs.length; i++)
-			{
-				in = getAssets().open("train/"+imgs[i]);
-				OCRUtil.trainMap.put(BitmapFactory.decodeStream(in), imgs[i].charAt(1)+"");
-			}
-			in.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Override

@@ -35,10 +35,10 @@ public class LoginActivity extends Activity {
 		Intent intent = getIntent();
 		int warningMsg = intent.getIntExtra(LoginActivity.WARNING_MSG, 0);
 		if (warningMsg == R.string.msg_username_error) {
-			Toast.makeText(getApplicationContext(), "用户名错误", Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), "用户名或密码错误", Toast.LENGTH_LONG).show();
 			username.requestFocus();
 		} else if (warningMsg == R.string.msg_password_error) {
-			Toast.makeText(getApplicationContext(), "密码错误", Toast.LENGTH_LONG).show();
+			Toast.makeText(getApplicationContext(), "用户名或密码错误", Toast.LENGTH_LONG).show();
 			password.requestFocus();
 		} else if (warningMsg == R.string.msg_check_network || warningMsg == R.string.msg_login_fail) {
 			Toast.makeText(getApplicationContext(), "请检查网络连接情况", Toast.LENGTH_LONG).show();
@@ -50,8 +50,6 @@ public class LoginActivity extends Activity {
 			Toast.makeText(getApplicationContext(), "没有在线用户", Toast.LENGTH_LONG).show();
 		} else if (warningMsg == R.string.msg_force_logout_success) {
 			Toast.makeText(getApplicationContext(), "强制下线成功", Toast.LENGTH_LONG).show();
-		} else if (warningMsg == R.string.msg_code_error) {
-			Toast.makeText(getApplicationContext(), "验证码错误", Toast.LENGTH_LONG).show();
 		}
 		
 		sp = this.getSharedPreferences("userinfo", MODE_PRIVATE);

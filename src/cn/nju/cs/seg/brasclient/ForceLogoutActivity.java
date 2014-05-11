@@ -83,24 +83,24 @@ public class ForceLogoutActivity extends Activity {
 	private class ShowContent extends AsyncTask<String, Void, Content> {
 		@Override
 		protected Content doInBackground(String... params) {
-			return MainActivity.client.getContent(params[0], params[1]);
+			return MainActivity.client.GetOnline(params[0], params[1]);
 		}
 		
 		@SuppressLint("SimpleDateFormat")
 		@Override
 		protected void onPostExecute(Content result) {
 			super.onPostExecute(result);
-			if (result != null && result.getResults() != null) {
-				if (result.getResults().getUsername() != null)
-					username.setText(result.getResults().getUsername());
-				if (result.getResults().getArea_name() != null)
-					areaname.setText(result.getResults().getArea_name());
-				if (result.getResults().getAcctstarttime() > 0)
-					logintime.setText(new SimpleDateFormat("MM/dd  HH:mm").format(new Date(result.getResults().getAcctstarttime()*1000)));
-				if (result.getResults().getUser_ip() != null)
-					ip.setText(result.getResults().getUser_ip());
-				if (result.getResults().getPayamount() >= 0.0)
-					payamount.setText(String.format("%.2f 元", result.getResults().getPayamount()));
+			if (result != null && result.getOnline() != null) {
+//				if (result.getOnline().getUsername() != null)
+//					username.setText(result.getOnline().getUsername());
+				if (result.getOnline().getArea_name() != null)
+					areaname.setText(result.getOnline().getArea_name());
+				if (result.getOnline().getAcctstarttime() > 0)
+					logintime.setText(new SimpleDateFormat("HH:mm  MM/dd").format(new Date(result.getOnline().getAcctstarttime()*1000)));
+//				if (result.getOnline().getUser_ip() != null)
+//					ip.setText(result.getOnline().getUser_ip());
+//				if (result.getOnline().getPayamount() >= 0.0)
+//					payamount.setText(String.format("%.2f 元", result.getOnline().getPayamount()));
 			}
 		}
 	}
