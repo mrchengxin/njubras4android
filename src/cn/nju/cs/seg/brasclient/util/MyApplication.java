@@ -3,7 +3,7 @@ package cn.nju.cs.seg.brasclient.util;
 import android.app.Application;
 
 /**
- * 获取
+ * 获取application本身
  */
 public class MyApplication extends Application {
 	private static MyApplication instance;

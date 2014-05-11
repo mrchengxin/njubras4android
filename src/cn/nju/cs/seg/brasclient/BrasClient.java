@@ -282,6 +282,12 @@ public class BrasClient {
 		return R.string.msg_logout_fail;
 	}
 	
+	/**
+	 * 强制下线
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	public int ForceLogout(String username, String password)
 	{
 		Content content = GetOnline(username, password);
